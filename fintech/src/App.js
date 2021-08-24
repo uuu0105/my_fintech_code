@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./component/Header";
+import EventExample from "./component/EventExample";
+import ListComponent from "./component/ListComponent";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AxiosTest from "./pages/AxiosTest";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          안녕하세요 <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/test" exact>
+          <Header title="테스트 페이지 1"></Header>
+          <EventExample/>
+        </Route>
+        <Route path="/test2" exact>
+          <Header title="테스트 페이지 2"></Header>
+          <ListComponent/>
+        </Route>
+        <Route path="/axios" exact>
+          <Header title="엑시오스 테스트"></Header>
+          <AxiosTest/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
