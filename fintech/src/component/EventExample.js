@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 const EventExample = () => {
-    const [contents, setContents] = useState("기본값")
+    const [contents, setContents] = useState("검색어를 입력하세요")
 
     const handleChange = (event) => {
         const {value} = event.target;

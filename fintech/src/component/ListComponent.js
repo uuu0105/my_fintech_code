@@ -1,20 +1,17 @@
 import React, {useState} from 'react'
 import ListItem from "./ListItem"
 
-const ListComponent = () => {
-    const [users, setUsers] = useState([
-        { name: "홍길동", age:12, height: 100},
-        { name: "동", age:15, height: 104},
-        { name: "길동", age:11, height: 120},
-    ])
+const ListComponent = ({articles}) => {
+    //const [datas, setData] = useState(articles)
+
     return (
         <div>
-            {users.map((user) => {
+            {articles.map((article) => {
                 return (
                     <ListItem 
-                        username={user.name} 
-                        age={user.age} 
-                        height={user.height}
+                        author={article.author} 
+                        title={article.title} 
+                        description={article.description}
                     ></ListItem>
                 );
             })}

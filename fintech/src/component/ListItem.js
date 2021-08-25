@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ListItem = ({username, age, height}) => {
+const ListItem = ({author, title, description}) => {
     return (
         <p>
-            {username} 님 나이는 {age} 이고 키는 {height}cm 입니다.
+            저자 : {author} <br/>
+            제목 : {title} <br/>
+            기사내용 : {description}
         </p>
     );
 };
