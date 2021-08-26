@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NewsSearch from "./pages/NewsSearch";
 import AddUser from "./pages/AddUser";
 import AuthResult from "./pages/AuthResult";
+import Main from "./pages/Main";
+import Balance from "./pages/Balance";
+import QrCode from "./pages/QrCode";
+import QrcodeReader from "./pages/QrcodeReader";
 
 function App() {
   return (
@@ -26,6 +30,18 @@ function App() {
         </Route>
         <Route path="/authResult" exact>
           <AuthResult/>
+        </Route>
+        <Route path="/main" exact>
+          <Main/>
+        </Route>
+        <Route path="/balance" exact>
+          <Balance/>
+        </Route>
+        <Route path="/qrcode" exact>
+          <QrCode/>
+        </Route>
+        <Route path="/qrreader" exact>
+          <QrcodeReader/>
         </Route>
       </Switch>
     </Router>
